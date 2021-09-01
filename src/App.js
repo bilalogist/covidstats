@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Helpline from './components/helpline'
+import {
+  Grid, Container
+} from '@material-ui/core'
+import Introduction from './components/introduction'
+import VaccineStats from './components/vaccinestats'
+import PakStats from './components/pakStats'
+import ProvinceStats from './components/provinceStat'
+import { useEffect } from 'react'
 function App() {
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Helpline />
+      <Container>
+        <Introduction />
+        <VaccineStats />
+        <PakStats />
+        <ProvinceStats />
+      </Container>
+
     </div>
   );
 }
